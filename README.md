@@ -52,4 +52,4 @@ Keeping it simple and lightweight is the number 1 priority. Don't put every sing
 
 <h3>License</h3>
 
-This project is licensed under the MIT License.
+This project is licensed under the <a href="./LICENSE">MIT</a> License.
