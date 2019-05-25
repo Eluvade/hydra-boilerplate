@@ -1,15 +1,6 @@
-<p align="center"><img src="./src/img/logo.png" /></p>
+<p align="center"><img src="./src/images/logo.png" /></p>
 
 <h1 align="center"> Hydra - Boilerplate Template Project </h1>
-
-[![npm][npm]][npm-url]
-[![node][node]][node-url]
-[![deps][deps]][deps-url]
-[![tests][tests]][tests-url]
-[![coverage][cover]][cover-url]
-[![chat][chat]][chat-url]
-[![downloads][downloads]][npm-url]
-[![contributors][contributors]][contributors-url]
 
 <p align="center">Quick start your project with Babel + Webpack + SASS fully configured</p>
 
@@ -18,10 +9,10 @@
 <h3> List of features </h3>
 
 <ul>
-  <li>Webpack</li>
+  <li>Robust Webpack Configuration File</li>
   <li>Babel Loader</li>
   <li>js/jx/css/scss/sass Transpilers</li>
-  <li>Production build script</li>
+  <li>Production Build Script</li>
 </ul>
 
 <h3> External links -> Documentation and Github repositories </h3>
@@ -38,12 +29,13 @@ $ cd hydra-boilerplate
 $ npm install
 ```
 <h3>Contributing</h3>
-Keeping it simple and lightweight is the number 1 priority. Don't put every single feature just because you can.
+Keeping it simple and lightweight is the number 1 priority. Don't add unnecessary libraries just because you can.
 
 <h3> Usage </h3>
 
-`npm start` : Launch `webpack-dev-server` with Hot Module Replacement - http://localhost:8080 by default<br />
+`npm run start` : Launches `webpack-dev-server` with Hot Module Replacement - http://localhost:8080 by default<br />
 `npm run build` : Compiles **/src** folder and creates **/dist** folder in the projects' root<br />
+`npm run watch` : Compile **/src** and start watching for changes; working directory<br />
 
 <h3>Author</h3>
 <ul>
