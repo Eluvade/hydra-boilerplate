@@ -1,4 +1,4 @@
-<p align="center"><img src="./src/assets/images/logo.png" /></p>
+<p align="center"><img src="./src/images/logo.png" /></p>
 
 <h1 align="center"> Hydra - Boilerplate Template Project </h1>
 
