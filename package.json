@@ -29,10 +29,16 @@
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   },
+  "keywords": [
+    "javascript",
+    "babel",
+    "webpack",
+    "boilerplate"
+  ],
   "scripts": {
     "build": "webpack -p",
     "watch": "webpack --progress --watch",
-    "start": "webpack-dev-server --open"
+    "server": "webpack-dev-server --open"
   },
   "engines": {
     "node": ">=8",

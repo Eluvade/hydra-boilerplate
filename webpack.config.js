@@ -1,24 +1,24 @@
-const path = require('path'),
-  webpack = require('webpack'),
-  HtmlWebpackPlugin = require('html-webpack-plugin'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin'),
-  CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/index.js'],
+  entry: [ '@babel/polyfill', './src/index.js' ],
   output: {
-    filename: 'assets/js/main.js',
+    filename: 'js/bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: './dist'
+    publicPath: './'
   },
   devtool: 'source-map',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        query: {
+        options: {
           presets: ['@babel/preset-env']
         }
       },
@@ -31,18 +31,39 @@ module.exports = {
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
+          use: [
+            {
+                loader: 'css-loader',
+                options: {
+                    minimize: true,
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'resolve-url-loader',
+            },
+            {
+                loader: 'sass-loader?sourceMap',
+                options: {
+                    sourceMap: true
+                }
+            }
+          ]
         })
       },
       {
         test: /\.(ico|jpg|jpeg|png|gif|svg)(\?.*)?$/,
         loader: 'file-loader',
         options: {
-          publicPath: '../../',
-          name: 'assets/images/[name].[ext]',
+          publicPath: './images',
+          name: 'images/[name].[ext]',
           limit: 10000
         }
       }
+      // { // run "npm i -D truffle-solidity-loader" if needed and don't forget to add a "," to the line above
+      //   test: /\.sol/,
+      //   loader: 'truffle-solidity'
+      // }
     ]
   },
   plugins: [
@@ -50,17 +71,12 @@ module.exports = {
       template: './src/index.html'
     }),
     new ExtractTextPlugin({
-      filename: 'assets/styles/main.css'
+      filename: 'styles/bundle.css'
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new CopyWebpackPlugin([{ from: './src/manifest.json' }]),
-    new CopyWebpackPlugin([
-      {
-        context: './src/assets/images',
-        from: '**/*',
-        to: 'assets/images'
-      }
+    new CopyPlugin([
+      { context: './src/images/', from: '**/*', to: 'images/' }
     ])
   ],
   devServer: {

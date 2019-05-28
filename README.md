@@ -26,16 +26,18 @@
 ```shell
 $ git clone https://github.com/Eluvade/hydra-boilerplate.git
 $ cd hydra-boilerplate
-$ npm install
+$ npm ci
 ```
 <h3>Contributing</h3>
 Keeping it simple and lightweight is the number 1 priority. Don't add unnecessary libraries just because you can.
 
 <h3> Usage </h3>
 
-`npm run start` : Launches `webpack-dev-server` with Hot Module Replacement - http://localhost:8080 by default<br />
 `npm run build` : Compiles **/src** folder and creates **/dist** folder in the projects' root<br />
 `npm run watch` : Compile **/src** and start watching for changes; working directory<br />
+`npm run server` : Launches `webpack-dev-server` with Hot Module Replacement - http://localhost:8080 by default<br /><br />
+
+!Note: **/src** is a mockup folder. You're free to delete and re-write all data inside, but keep the folder structure in tact if you don't want to re-configure webpack
 
 <h3>Author</h3>
 <ul>
