@@ -1,9 +1,12 @@
 {
+  "plugins": [["lodash", { "id": ["async", "lodash-bound"] }]],
   "presets": [
-    ["@babel/preset-env",
-      {
-        "useBuiltIns": "usage"
-      }
-    ]
+    ["@babel/preset-env", {
+      "targets": {
+        "node": 6
+      },
+      "modules": false,
+      "useBuiltIns": "usage"
+    }]
   ]
 }

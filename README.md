@@ -35,7 +35,7 @@ Keeping it simple and lightweight is the number 1 priority. Don't add unnecessar
 
 `npm run build` : Compiles **/src** folder and creates **/dist** folder in the projects' root<br />
 `npm run watch` : Compile **/src** and start watching for changes; working directory<br />
-`npm run server` : Launches `webpack-dev-server` with Hot Module Replacement - http://localhost:8080 by default<br /><br />
+`npm run start` : Launches `webpack-dev-server` with Hot Module Replacement - http://localhost:8080 by default<br /><br />
 
 !Note: **/src** is a mockup folder. You're free to delete and re-write all data inside, but keep the folder structure in tact if you don't want to re-configure webpack
 
