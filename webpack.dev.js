@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -29,7 +28,6 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'style-loader',
-          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'resolve-url-loader',
@@ -70,7 +68,6 @@ module.exports = {
     new CopyPlugin([
       { context: './src/images/', from: '**/*', to: 'images/' }
     ]),
-    new MiniCssExtractPlugin({ filename: '/styles/bundle.css'}),
     new webpack.DefinePlugin({
         'process.env': {
             'NODE_ENV': JSON.stringify('development')
