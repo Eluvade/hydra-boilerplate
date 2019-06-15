@@ -1,7 +1,7 @@
 {
   "name": "hydra-boilerplate",
   "description": "Hydra - Quickstart Boilerplate Project with preconfiqured Webpack, Babel and SASS",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Bunny Eluvade",
   "license": "MIT",
   "repository": {
