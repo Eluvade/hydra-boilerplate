@@ -2,7 +2,7 @@
 
 <h1 align="center"> Hydra - Boilerplate Template Project </h1>
 
-<p align="center">Quick start your project with Babel + Webpack + SASS fully configured</p>
+<p align="center">Quick start your project with Webpack + Babel + SASS fully configured</p>
 
 <hr/>
 
@@ -37,7 +37,7 @@ Keeping it simple and lightweight is the number 1 priority. Don't add unnecessar
 `npm run watch` : Compile **/src** and start watching for changes; working directory<br />
 `npm run start` : Launches `webpack-dev-server` with Hot Module Replacement - http://localhost:8080 by default<br /><br />
 
-Note: **/src** is a mockup folder. You're free to delete and re-write all data inside, but keep the folder structure in tact if you don't want to re-configure webpack
+Note: **/src** is a mockup folder. You're free to delete and re-write all data inside, but keep the folder structure intact if you don't want to re-configure webpack
 
 <h3> Known Issues </h3>
 On Linux: If building gives you an Error: "Cannot find module node-sass", try the following:

@@ -101,11 +101,11 @@ module.exports = {
       'collections': true,
       'paths': true
     }),
-    new SitemapPlugin('https://dive.foundation', paths, {
+    new SitemapPlugin('http://localhost:8080', paths, {
       fileName: 'map.xml'
     }),
     new RobotsPlugin({
-      sitemap: 'https://dive.foundation/map.xml'
+      sitemap: 'http://localhost:8080/map.xml' // Change to your domain name / webserver IP
     }),
     new StyleLintPlugin({
       configFile: './stylelint.config.js',

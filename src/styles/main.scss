@@ -1,109 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+@import './variables.scss';
+@import './animate.scss';
+@import './loader.scss';
+@import './root.scss';
+
 body {
-  font-family: 'Inconsolata', Arial, sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 1.5;
-  color: #cccccc;
-  background: #000;
-  height: 100%;
-  position: relative;
+  font-family: Inconsolata, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  color: $text;
+  background-color: $bg;
 }
 
 a {
-  color: #8C7676;
+  cursor: pointer;
+  color: #66cdd2;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  text-decoration: none;
   &:hover, &:active, &:focus {
-    color: #8C7676;
-    outline: none;
+    color: $highlight;
+    // outline: none;
+    text-decoration: underline;
   }
 }
 
 p {
   margin-bottom: 1.5em;
-  font-size: 16px;
+}
+
+span {
+  color: $text;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #fff;
-  font-family: 'Inconsolata', Arial, sans-serif;
-  font-weight: 400;
-  margin: 0 0 30px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem;
 }
 
-::-webkit-selection, ::-moz-selection, ::selection {
-  color: #f4fbfc;
-  background: #2f939a;
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
 }
 
-#home {
-  background-color: transparent;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-  color: #fff;
-  a {
-    color: rgba(255, 255, 255, 0.8) !important;
-    text-decoration: underline;
-    &:hover {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-  .gradient {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.3);
-  }
-  height: 100vh;
-  .text-wrap {
-    height: 100vh;
-    display: table;
-    width: 100%;
-    position: relative;
-    z-index: 4;
-  }
-  .text-inner {
-    display: table-cell;
-    vertical-align: middle;
-    h1 {
-      font-size: 60px;
-      color: white;
-      margin: 0 0 30px 0;
-      font-weight: 700;
-      line-height: 58px;
-      span {
-        color: #8C7676;
-      }
-    }
-    h2 {
-      font-size: 20px;
-      line-height: 30px;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.8);
-      margin: 0 0 60px 0;
-    }
-  }
+canvas {
+  top: 0;
+  left: 0;
+  z-index: -2;
+  position: absolute;
 }
 
-@media screen and (max-width: 480px) {
-  #home {
-    background-position: center center;
-    background-attachment: initial;
-  }
+::-webkit-selection {
+  color: $bg!important;
+  background: $highlight!important;
 }
 
-@media screen and (max-width: 768px) {
-  #home .text-inner h1 {
-    font-size: 40px;
-  }
+::-moz-selection {
+  color: $bg!important;
+  background: $highlight!important;
 }
 
-.to-animate {
-  opacity: 0;
+::selection {
+  color: $bg!important;
+  background: $highlight!important;
+}
+
+.center {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
 }
