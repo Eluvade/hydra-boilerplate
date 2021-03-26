@@ -22,7 +22,9 @@ a {
   -o-transition: 0.5s;
   transition: 0.5s;
   text-decoration: none;
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     color: $highlight;
     // outline: none;
     text-decoration: underline;
@@ -37,7 +39,12 @@ span {
   color: $text;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 2rem;
   font-weight: 700;
   margin: 2rem;
@@ -56,18 +63,18 @@ canvas {
 }
 
 ::-webkit-selection {
-  color: $bg!important;
-  background: $highlight!important;
+  color: $bg !important;
+  background: $highlight !important;
 }
 
 ::-moz-selection {
-  color: $bg!important;
-  background: $highlight!important;
+  color: $bg !important;
+  background: $highlight !important;
 }
 
 ::selection {
-  color: $bg!important;
-  background: $highlight!important;
+  color: $bg !important;
+  background: $highlight !important;
 }
 
 .center {

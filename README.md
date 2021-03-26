@@ -2,16 +2,17 @@
 
 <h1 align="center"> Hydra - Boilerplate Template Project </h1>
 
-<p align="center">Quick start your project with Webpack + Babel + SASS fully configured</p>
+<p align="center">Quick start your project with Webpack + Babel + Typescript + Stylers fully configured</p>
 
 <hr/>
 
 <h3> List of features </h3>
 
 <ul>
-  <li>Robust Webpack Configuration File</li>
-  <li>Babel Loader</li>
-  <li>js/jx/css/scss/sass Transpilers</li>
+  <li>Robust Webpack Configuration File for both production and development environments</li>
+  <li>Babel Transpiler</li>
+  <li>TypeScript Transpiler</li>
+  <li>js/jx/css/scss/sass/less Transpilers</li>
   <li>Production Build Script</li>
 </ul>
 
@@ -34,7 +35,6 @@ Keeping it simple and lightweight is the number 1 priority. Don't add unnecessar
 <h3> Usage </h3>
 
 `npm run build` : Compiles **/src** folder and creates **/dist** folder in the projects' root<br />
-`npm run watch` : Compile **/src** and start watching for changes; working directory<br />
 `npm run start` : Launches `webpack-dev-server` with Hot Module Replacement - http://localhost:8080 by default<br /><br />
 
 Note: **/src** is a mockup folder. You're free to delete and re-write all data inside, but keep the folder structure intact if you don't want to re-configure webpack
