@@ -1,7 +1,8 @@
 <p align="center"><img src="./src/assets/logo.png" /></p>
 
-<h1 align="center"> Hydra - Boilerplate Webpack 5 Template Project </h1>
 [![npm version](https://img.shields.io/npm/v/hydra-boilerplate.svg?style=flat)](https://www.npmjs.com/package/hydra-boilerplate) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Eluvade/hydra-boilerplate/tree/2.0.1)
+
+<h1 align="center"> Hydra - Boilerplate Webpack 5 Template Project </h1>
 
 <p align="center">Quick start your project with Webpack 5 + Babel + Typescript + Stylers fully configured</p>
 
