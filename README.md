@@ -13,7 +13,7 @@
   <li>Babel Transpiler</li>
   <li>TypeScript Transpiler</li>
   <li>scss/sass/less Transpilers</li>
-  <li>Minimization, linting, terser, chunking, assets & build optimization</li>
+  <li>Minimizers, linters, terser, chunking, asset & build optimization</li>
 </ul>
 
 <h3> External links -> Documentation and Github repositories </h3>
@@ -38,6 +38,8 @@ Keeping it simple and lightweight is the number 1 priority. Don't add unnecessar
 `npm run start` : Launches `webpack-dev-server` with Hot Module Replacement - http://localhost:8080 by default<br /><br />
 
 Note: **/src** is a mockup folder. You're free to delete and re-write all data inside, but keep the folder structure intact if you don't want to re-configure webpack
+
+In order for Webpack to bundle your image/gif/video/music assets, you need to import/require them in your javascript. URL's in CSS will be resolved automatically.
 
 <h3> Known Issues </h3>
 On Linux: If building gives you an Error: "Cannot find module node-sass", try the following:
