@@ -1,19 +1,19 @@
 #root {
-  position: relative;
-  min-width: 100vw;
-  min-height: 100vh;
-  height: 100vh;
+	position: relative;
+	min-width: 100vw;
+	min-height: 100vh;
+	height: 100vh;
 }
 
 @media screen and (max-width: 480px) {
-  #root {
-    background-position: center center;
-    background-attachment: initial;
-  }
+	#root {
+		background-position: center center;
+		background-attachment: initial;
+	}
 }
 
 @media screen and (max-width: 768px) {
-  #root .text-inner h1 {
-    font-size: 40px;
-  }
+	#root .text-inner h1 {
+		font-size: 40px;
+	}
 }

@@ -1,8 +1,8 @@
 <p align="center"><img src="./src/images/logo.png" /></p>
 
-<h1 align="center"> Hydra - Boilerplate Template Project </h1>
+<h1 align="center"> Hydra - Boilerplate Webpack 5 Template Project </h1>
 
-<p align="center">Quick start your project with Webpack + Babel + Typescript + Stylers fully configured</p>
+<p align="center">Quick start your project with Webpack 5 + Babel + Typescript + Stylers fully configured</p>
 
 <hr/>
 
@@ -12,8 +12,8 @@
   <li>Robust Webpack Configuration File for both production and development environments</li>
   <li>Babel Transpiler</li>
   <li>TypeScript Transpiler</li>
-  <li>js/jx/css/scss/sass/less Transpilers</li>
-  <li>Production Build Script</li>
+  <li>scss/sass/less Transpilers</li>
+  <li>Minimization, linting, terser, chunking, assets & build optimization</li>
 </ul>
 
 <h3> External links -> Documentation and Github repositories </h3>

@@ -1,0 +1,20 @@
+// prettier.config.js or .prettierrc.js
+module.exports = {
+  trailingComma: "all",
+  tabWidth: 4,
+  semi: false,
+  singleQuote: true,
+  useTabs: true,
+  arrowParents: 'always',
+  bracketSpacing: true,
+  embeddedLanguageFormatting: 'auto',
+  htmlWhitespaceSensitivity: 'css',
+  insertPragma: false,
+  jsxSingleQuote: false,
+  jsxBracketSameLine: true,
+  printWidth: 80,
+  proseWrap: 'preserve',
+  quoteProps: 'as-needed',
+  requirePragma: false,
+  vueIndentScriptAndStyle: false,
+}

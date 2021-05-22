@@ -5,38 +5,38 @@
 @import './root.scss';
 
 body {
-  font-family: Inconsolata, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0;
-  overflow: hidden;
-  -webkit-font-smoothing: antialiased;
-  color: $text;
-  background-color: $bg;
+	font-family: Inconsolata, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 0;
+	overflow: hidden;
+	-webkit-font-smoothing: antialiased;
+	color: $text;
+	background-color: $bg;
 }
 
 a {
-  cursor: pointer;
-  color: #66cdd2;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  text-decoration: none;
-  &:hover,
-  &:active,
-  &:focus {
-    color: $highlight;
-    // outline: none;
-    text-decoration: underline;
-  }
+	cursor: pointer;
+	color: #66cdd2;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	text-decoration: none;
+	&:hover,
+	&:active,
+	&:focus {
+		color: $highlight;
+		// outline: none;
+		text-decoration: underline;
+	}
 }
 
 p {
-  margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 span {
-  color: $text;
+	color: $text;
 }
 
 h1,
@@ -45,45 +45,45 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 2rem;
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 2rem;
 }
 
 h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
+	font-size: 3rem;
+	text-transform: uppercase;
 }
 
 canvas {
-  top: 0;
-  left: 0;
-  z-index: -2;
-  position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+	position: absolute;
 }
 
 ::-webkit-selection {
-  color: $bg !important;
-  background: $highlight !important;
+	color: $bg !important;
+	background: $highlight !important;
 }
 
 ::-moz-selection {
-  color: $bg !important;
-  background: $highlight !important;
+	color: $bg !important;
+	background: $highlight !important;
 }
 
 ::selection {
-  color: $bg !important;
-  background: $highlight !important;
+	color: $bg !important;
+	background: $highlight !important;
 }
 
 .center {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .hidden {
-  display: none;
+	display: none;
 }

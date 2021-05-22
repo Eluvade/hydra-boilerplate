@@ -5,56 +5,66 @@ const commonConfig = require('./webpack.config.common')
 
 module.exports = merge(commonConfig, {
   mode: 'development',
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     historyApiFallback: true,
     open: true,
     compress: false,
     hot: true,
-    port: 8080
+    port: 8080,
   },
   module: {
-    rules: [{
-      test: /\.(scss|css)$/,
-      use: [
-        'style-loader',
-        {
-          loader: 'css-loader',
-          options: {
-            sourceMap: true,
-            importLoaders: 1,
-            modules: true
-          }
-        },
-        {
-          loader: 'postcss-loader',
-          options: {
-            sourceMap: true
-          }
-        },
-        {
-          loader: 'resolve-url-loader',
-          options: {
-            sourceMap: true,
-            removeCR: true
-          }
-        },
-        {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true
-          }
-        },
-      ]
-    }, ]
+    rules: [
+            {
+              test: /\.css$/,
+              use: [
+                'style-loader',
+                {
+                  loader: 'css-loader',
+                  options: {
+                    importLoaders: 1
+                  }
+                },
+                'postcss-loader',
+              ]
+            },
+            {
+              test: /\.((sa|sc)ss)$/i,
+              use: [
+                'style-loader',
+                'css-loader',
+                'postcss-loader',
+                'resolve-url-loader',
+                'sass-loader',
+              ]
+            },
+          {
+            test: /\.less$/,
+            use: [
+              'style-loader',
+              'css-loader',
+              'postcss-loader',
+              'resolve-url-loader',
+              'less-loader'
+            ]
+          },
+          {
+            test: /\.styl$/,
+            use: [
+              'style-loader',
+              'css-loader',
+              'postcss-loader',
+              'resolve-url-loader',
+              'stylus-loader'
+            ]
+          },
+        ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('development')
-      }
-    }),
-    new webpack.HotModuleReplacementPlugin()
-  ]
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+  performance: {
+    // hints: 'warning',
+  },
 })
